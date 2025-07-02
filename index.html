@@ -5,17 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heroes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-        <h1></h1>
-        <nav>
-            <ul>
-                <li><i class="fa-solid fa-house"></i><a href="index.html">Home</a></li>
-                <li><i class="fa-brands fa-product-hunt"></i><a href="products.html">Products</a></li>
-                <li><i class="fa-solid fa-bell-concierge"></i><a href="services.html">Services</a></li>
-                <li><i class="fa-solid fa-address-book"></i><a href="contact.html">Contact</a></li>
+    <header class="shadow-lg">
+        <h1 class="bg-blue-600 text-white text-center py-4 text-2xl font-bold">Heroes</h1>
+        <nav class="bg-gray-800 text-white">
+            <ul class="flex justify-center space-x-8 py-4">
+                <li class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300">
+                    <i class="fa-solid fa-house mr-2"></i>
+                    <a href="index.html" class="hover:text-blue-300">Home</a>
+                </li>
+                <li class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300">
+                    <i class="fa-brands fa-product-hunt mr-2"></i>
+                    <a href="products.html" class="hover:text-blue-300">Products</a>
+                </li>
+                <li class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300">
+                    <i class="fa-solid fa-bell-concierge mr-2"></i>
+                    <a href="services.html" class="hover:text-blue-300">Services</a>
+                </li>
+                <li class="hover:bg-gray-700 px-4 py-2 rounded transition duration-300">
+                    <i class="fa-solid fa-address-book mr-2"></i>
+                    <a href="contact.html" class="hover:text-blue-300">Contact</a>
+                </li>
             </ul>
         </nav>
     </header>
