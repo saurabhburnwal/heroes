@@ -47,7 +47,7 @@
         <section class="mx-auto my-8 p-6 bg-white rounded-lg shadow-md max-w-4xl">
             <h2 class="text-3xl font-bold text-center mb-6">Watch Our Promotional Video</h2>
             <div class="flex justify-center">
-                <video controls autoplay controlslist="nodownload" class="w-full max-w-3xl rounded-lg shadow-lg">
+                <video controls autoplay muted controlslist="nodownload" class="w-full max-w-3xl rounded-lg shadow-lg">
                     <source src="video/promotion_video.webm" type="video/mp4">
                     <track kind="subtitles" src="subtitle/subtitle.vtt" srclang="en" label="English">
                     Your browser does not support the video tag.
@@ -71,6 +71,39 @@
             </p>
         </section>
     </main>
+    
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div class="text-center">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    <h3 class="text-lg font-semibold mb-2">Our Location</h3>
+                    <p class="text-gray-300">Find us anywhere in the world</p>
+                </div>
+                
+                <div class="text-center">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-.61.08-1.21.21-1.78L9.99 16v1c0 1.1.9 2 2 2v1.93C7.06 20.48 4 16.69 4 12zm14.89 2.41c-.26-.81-1-1.41-1.89-1.41h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41C17.92 5.77 20 8.65 20 12c0 .83-.13 1.64-.37 2.41z"/>
+                    </svg>
+                    <h3 class="text-lg font-semibold mb-2">Global Reach</h3>
+                    <p class="text-gray-300">Heroes across the globe</p>
+                </div>
+                
+                <div class="text-center">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <h3 class="text-lg font-semibold mb-2">Heroes Badge</h3>
+                    <p class="text-gray-300">Recognize true heroes</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+                <p class="text-gray-400">&copy; 2025 Heroes. All rights reserved. | Empowering heroes worldwide</p>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>
