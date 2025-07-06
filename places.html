@@ -3,9 +3,345 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Places - Heroes Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    
+<body class="bg-cover bg-center bg-no-repeat min-h-screen bg-gray-800 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+    <header class="shadow-lg">
+        <h1 class="bg-blue-600 text-white text-center py-3 sm:py-4 text-xl sm:text-2xl font-bold">Heroes Explorer</h1>
+        <nav class="bg-gray-800 text-white">
+            <section class="flex justify-between items-center px-4 py-2 sm:hidden">
+                <span class="text-lg font-semibold">Menu</span>
+                <button id="mobile-menu-toggle" class="text-white hover:text-blue-300 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </section>
+            <ul id="mobile-menu" class="hidden sm:flex flex-col sm:flex-row justify-center sm:space-x-4 lg:space-x-8 py-2 sm:py-4">
+                <li class="hover:bg-gray-700 px-3 sm:px-4 py-2 rounded transition duration-300 text-center">
+                    <i class="fa-solid fa-house mr-2"></i>
+                    <a href="index.html" class="hover:text-blue-300 text-sm sm:text-base">Home</a>
+                </li>
+                <li class="hover:bg-gray-700 px-3 sm:px-4 py-2 rounded transition duration-300 text-center bg-gray-700">
+                    <i class="fa-solid fa-earth-americas mr-2"></i>
+                    <a href="places.html" class="hover:text-blue-300 text-sm sm:text-base text-blue-300">Places</a>
+                </li>
+                <li class="hover:bg-gray-700 px-3 sm:px-4 py-2 rounded transition duration-300 text-center">
+                    <i class="fa-solid fa-image mr-2"></i>
+                    <a href="gallery.html" class="hover:text-blue-300 text-sm sm:text-base">Gallery</a>
+                </li>
+                <li class="hover:bg-gray-700 px-3 sm:px-4 py-2 rounded transition duration-300 text-center">
+                    <i class="fa-solid fa-address-book mr-2"></i>
+                    <a href="contact.html" class="hover:text-blue-300 text-sm sm:text-base">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <section class="text-center mb-8 sm:mb-12">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
+                <i class="fa-solid fa-globe mr-3"></i>
+                Explore the Seven Continents
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-200 max-w-4xl mx-auto">
+                Embark on heroic journeys across all seven continents. From ancient mysteries to modern marvels, discover where legends are born and heroes rise to meet extraordinary challenges.
+            </p>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-12">
+            <!-- North America -->
+            <article class="bg-gradient-to-br from-blue-500/25 via-indigo-500/25 to-purple-600/25 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20 transform hover:scale-105 transition duration-300">
+                <figure class="h-48 sm:h-56 bg-gradient-to-br from-blue-500 to-indigo-700 flex items-center justify-center relative">
+                    <i class="fa-solid fa-mountain text-6xl text-white"></i>
+                    <section class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
+                        <span class="text-white text-sm font-semibold">23 Countries</span>
+                    </section>
+                </figure>
+                <section class="p-4 sm:p-6">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">
+                        <i class="fa-solid fa-flag-usa mr-2"></i>North America
+                    </h3>
+                    <p class="text-gray-200 text-sm sm:text-base mb-4">From the Arctic wilderness of Canada to the tropical paradises of the Caribbean, North America offers diverse landscapes where modern heroes protect bustling cities and pristine wilderness.</p>
+                    <section class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-500/30 text-blue-200 px-2 py-1 rounded-full text-xs">USA</span>
+                        <span class="bg-red-500/30 text-red-200 px-2 py-1 rounded-full text-xs">Canada</span>
+                        <span class="bg-green-500/30 text-green-200 px-2 py-1 rounded-full text-xs">Mexico</span>
+                        <span class="bg-yellow-500/30 text-yellow-200 px-2 py-1 rounded-full text-xs">+20 more</span>
+                    </section>
+                    <section class="flex items-center justify-between">
+                        <span class="text-gray-300 text-sm">
+                            <i class="fa-solid fa-users mr-1"></i>579M People
+                        </span>
+                        <button class="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg transition duration-300 text-sm">
+                            Explore <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </button>
+                    </section>
+                </section>
+            </article>
+
+            <!-- South America -->
+            <article class="bg-gradient-to-br from-green-500/25 via-emerald-500/25 to-teal-600/25 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20 transform hover:scale-105 transition duration-300">
+                <figure class="h-48 sm:h-56 bg-gradient-to-br from-green-500 to-emerald-700 flex items-center justify-center relative">
+                    <i class="fa-solid fa-tree text-6xl text-white"></i>
+                    <section class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
+                        <span class="text-white text-sm font-semibold">12 Countries</span>
+                    </section>
+                </figure>
+                <section class="p-4 sm:p-6">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">
+                        <i class="fa-solid fa-leaf mr-2"></i>South America
+                    </h3>
+                    <p class="text-gray-200 text-sm sm:text-base mb-4">Home to the Amazon rainforest and Andes mountains, South America is where nature's guardians protect Earth's lungs and ancient civilizations reveal their secrets to worthy heroes.</p>
+                    <section class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-yellow-500/30 text-yellow-200 px-2 py-1 rounded-full text-xs">Brazil</span>
+                        <span class="bg-blue-500/30 text-blue-200 px-2 py-1 rounded-full text-xs">Argentina</span>
+                        <span class="bg-red-500/30 text-red-200 px-2 py-1 rounded-full text-xs">Peru</span>
+                        <span class="bg-green-500/30 text-green-200 px-2 py-1 rounded-full text-xs">+9 more</span>
+                    </section>
+                    <section class="flex items-center justify-between">
+                        <span class="text-gray-300 text-sm">
+                            <i class="fa-solid fa-users mr-1"></i>434M People
+                        </span>
+                        <button class="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg transition duration-300 text-sm">
+                            Explore <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </button>
+                    </section>
+                </section>
+            </article>
+
+            <!-- Europe -->
+            <article class="bg-gradient-to-br from-purple-500/25 via-violet-500/25 to-indigo-600/25 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20 transform hover:scale-105 transition duration-300">
+                <figure class="h-48 sm:h-56 bg-gradient-to-br from-purple-500 to-indigo-700 flex items-center justify-center relative">
+                    <i class="fa-solid fa-chess-rook text-6xl text-white"></i>
+                    <section class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
+                        <span class="text-white text-sm font-semibold">44 Countries</span>
+                    </section>
+                </figure>
+                <section class="p-4 sm:p-6">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">
+                        <i class="fa-solid fa-crown mr-2"></i>Europe
+                    </h3>
+                    <p class="text-gray-200 text-sm sm:text-base mb-4">A continent rich in history and culture, where medieval castles meet cutting-edge technology. European heroes defend both ancient traditions and modern innovations.</p>
+                    <section class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-red-500/30 text-red-200 px-2 py-1 rounded-full text-xs">Germany</span>
+                        <span class="bg-blue-500/30 text-blue-200 px-2 py-1 rounded-full text-xs">France</span>
+                        <span class="bg-green-500/30 text-green-200 px-2 py-1 rounded-full text-xs">Italy</span>
+                        <span class="bg-purple-500/30 text-purple-200 px-2 py-1 rounded-full text-xs">+41 more</span>
+                    </section>
+                    <section class="flex items-center justify-between">
+                        <span class="text-gray-300 text-sm">
+                            <i class="fa-solid fa-users mr-1"></i>748M People
+                        </span>
+                        <button class="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg transition duration-300 text-sm">
+                            Explore <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </button>
+                    </section>
+                </section>
+            </article>
+
+            <!-- Asia -->
+            <article class="bg-gradient-to-br from-red-500/25 via-orange-500/25 to-yellow-600/25 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20 transform hover:scale-105 transition duration-300">
+                <figure class="h-48 sm:h-56 bg-gradient-to-br from-red-500 to-orange-700 flex items-center justify-center relative">
+                    <i class="fa-solid fa-pagoda text-6xl text-white"></i>
+                    <section class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
+                        <span class="text-white text-sm font-semibold">48 Countries</span>
+                    </section>
+                </figure>
+                <section class="p-4 sm:p-6">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">
+                        <i class="fa-solid fa-yin-yang mr-2"></i>Asia
+                    </h3>
+                    <p class="text-gray-200 text-sm sm:text-base mb-4">The world's largest continent, where ancient wisdom meets futuristic innovation. Home to legendary warriors, spiritual masters, and technological pioneers.</p>
+                    <section class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-red-500/30 text-red-200 px-2 py-1 rounded-full text-xs">China</span>
+                        <span class="bg-orange-500/30 text-orange-200 px-2 py-1 rounded-full text-xs">India</span>
+                        <span class="bg-yellow-500/30 text-yellow-200 px-2 py-1 rounded-full text-xs">Japan</span>
+                        <span class="bg-pink-500/30 text-pink-200 px-2 py-1 rounded-full text-xs">+45 more</span>
+                    </section>
+                    <section class="flex items-center justify-between">
+                        <span class="text-gray-300 text-sm">
+                            <i class="fa-solid fa-users mr-1"></i>4.6B People
+                        </span>
+                        <button class="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg transition duration-300 text-sm">
+                            Explore <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </button>
+                    </section>
+                </section>
+            </article>
+
+            <!-- Africa -->
+            <article class="bg-gradient-to-br from-amber-500/25 via-yellow-500/25 to-orange-600/25 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20 transform hover:scale-105 transition duration-300">
+                <figure class="h-48 sm:h-56 bg-gradient-to-br from-amber-500 to-orange-700 flex items-center justify-center relative">
+                    <i class="fa-solid fa-sun text-6xl text-white"></i>
+                    <section class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
+                        <span class="text-white text-sm font-semibold">54 Countries</span>
+                    </section>
+                </figure>
+                <section class="p-4 sm:p-6">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">
+                        <i class="fa-solid fa-elephant mr-2"></i>Africa
+                    </h3>
+                    <p class="text-gray-200 text-sm sm:text-base mb-4">The cradle of humanity, where wildlife protectors guard vast savannas and ancient guardians protect humanity's origins. A continent of incredible diversity and untold stories.</p>
+                    <section class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-green-500/30 text-green-200 px-2 py-1 rounded-full text-xs">Nigeria</span>
+                        <span class="bg-yellow-500/30 text-yellow-200 px-2 py-1 rounded-full text-xs">South Africa</span>
+                        <span class="bg-red-500/30 text-red-200 px-2 py-1 rounded-full text-xs">Egypt</span>
+                        <span class="bg-orange-500/30 text-orange-200 px-2 py-1 rounded-full text-xs">+51 more</span>
+                    </section>
+                    <section class="flex items-center justify-between">
+                        <span class="text-gray-300 text-sm">
+                            <i class="fa-solid fa-users mr-1"></i>1.4B People
+                        </span>
+                        <button class="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg transition duration-300 text-sm">
+                            Explore <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </button>
+                    </section>
+                </section>
+            </article>
+
+            <!-- Oceania -->
+            <article class="bg-gradient-to-br from-cyan-500/25 via-teal-500/25 to-blue-600/25 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20 transform hover:scale-105 transition duration-300">
+                <figure class="h-48 sm:h-56 bg-gradient-to-br from-cyan-500 to-blue-700 flex items-center justify-center relative">
+                    <i class="fa-solid fa-water text-6xl text-white"></i>
+                    <section class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
+                        <span class="text-white text-sm font-semibold">14 Countries</span>
+                    </section>
+                </figure>
+                <section class="p-4 sm:p-6">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">
+                        <i class="fa-solid fa-island-tropical mr-2"></i>Oceania
+                    </h3>
+                    <p class="text-gray-200 text-sm sm:text-base mb-4">A realm of islands and oceanic wonders, where marine guardians protect coral reefs and island heroes preserve unique ecosystems across the vast Pacific.</p>
+                    <section class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-500/30 text-blue-200 px-2 py-1 rounded-full text-xs">Australia</span>
+                        <span class="bg-cyan-500/30 text-cyan-200 px-2 py-1 rounded-full text-xs">New Zealand</span>
+                        <span class="bg-teal-500/30 text-teal-200 px-2 py-1 rounded-full text-xs">Fiji</span>
+                        <span class="bg-indigo-500/30 text-indigo-200 px-2 py-1 rounded-full text-xs">+11 more</span>
+                    </section>
+                    <section class="flex items-center justify-between">
+                        <span class="text-gray-300 text-sm">
+                            <i class="fa-solid fa-users mr-1"></i>45M People
+                        </span>
+                        <button class="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg transition duration-300 text-sm">
+                            Explore <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </button>
+                    </section>
+                </section>
+            </article>
+        </section>
+
+        <!-- Antarctica Special Section -->
+        <section class="mb-12">
+            <article class="bg-gradient-to-br from-gray-400/25 via-blue-400/25 to-white/25 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20 max-w-4xl mx-auto">
+                <section class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                    <figure class="h-48 lg:h-full bg-gradient-to-br from-gray-300 to-blue-500 flex items-center justify-center relative">
+                        <i class="fa-solid fa-snowflake text-6xl text-white"></i>
+                        <section class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
+                            <span class="text-white text-sm font-semibold">Research Stations</span>
+                        </section>
+                    </figure>
+                    <section class="p-6 lg:p-8 flex flex-col justify-center">
+                        <h3 class="text-2xl sm:text-3xl font-bold text-white mb-3">
+                            <i class="fa-solid fa-icicles mr-2"></i>Antarctica
+                        </h3>
+                        <p class="text-gray-200 text-base mb-4">The frozen frontier where climate guardians and researchers protect Earth's climate secrets. A continent dedicated to peace and scientific discovery, where international heroes collaborate against extreme conditions.</p>
+                        <section class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-500/30 text-blue-200 px-2 py-1 rounded-full text-xs">Scientific Research</span>
+                            <span class="bg-white/30 text-white px-2 py-1 rounded-full text-xs">Climate Monitoring</span>
+                            <span class="bg-gray-500/30 text-gray-200 px-2 py-1 rounded-full text-xs">Conservation</span>
+                        </section>
+                        <section class="flex items-center justify-between">
+                            <span class="text-gray-300 text-sm">
+                                <i class="fa-solid fa-thermometer-empty mr-1"></i>-89°C Record
+                            </span>
+                            <button class="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg transition duration-300 text-sm">
+                                Discover <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </section>
+                    </section>
+                </section>
+            </article>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center">
+            <article class="bg-gradient-to-r from-blue-500/25 via-pink-500/25 to-purple-600/25 backdrop-blur-sm rounded-lg p-6 sm:p-8 border border-white/20 max-w-4xl mx-auto">
+                <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">Ready to Begin Your Global Adventure?</h3>
+                <p class="text-gray-200 text-base sm:text-lg mb-6">Choose your continent and discover where your heroic journey will take you. Each destination offers unique challenges, breathtaking landscapes, and opportunities to make a difference.</p>
+                <section class="flex flex-wrap justify-center gap-4">
+                    <button class="bg-white/90 text-blue-600 hover:bg-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 text-sm sm:text-base shadow-lg">
+                        <i class="fa-solid fa-compass mr-2"></i>
+                        Start Exploring
+                    </button>
+                    <button class="bg-transparent border-2 border-white/50 text-white hover:bg-white/10 font-bold py-3 px-6 rounded-lg transition duration-300 text-sm sm:text-base">
+                        <i class="fa-solid fa-map mr-2"></i>
+                        View World Map
+                    </button>
+                </section>
+            </article>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 sm:py-8 mt-8 sm:mt-12">
+        <section class="max-w-6xl mx-auto px-4 sm:px-6">
+            <section class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-center">
+                <article class="text-center">
+                    <svg class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    <h3 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2">Our Location</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">Find us anywhere in the world</p>
+                </article>
+                
+                <article class="text-center">
+                    <svg class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-.61.08-1.21.21-1.78L9.99 16v1c0 1.1.9 2 2 2v1.93C7.06 20.48 4 16.69 4 12zm14.89 2.41c-.26-.81-1-1.41-1.89-1.41h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41C17.92 5.77 20 8.65 20 12c0 .83-.13 1.64-.37 2.41z"/>
+                    </svg>
+                    <h3 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2">Global Reach</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">Heroes across the globe</p>
+                </article>
+                
+                <article class="text-center">
+                    <svg class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <h3 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2">Heroes Badge</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">Recognize true heroes</p>
+                </article>
+            </section>
+            
+            <aside class="border-t border-gray-700 mt-6 sm:mt-8 pt-4 sm:pt-6 text-center">
+                <p class="text-gray-400 text-xs sm:text-sm lg:text-base">&copy; 2025 Heroes Explorer. All rights reserved. | Discover the world with heroes</p>
+            </aside>
+        </section>
+    </footer>
+
+    <script>
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            
+            const icon = mobileMenuToggle.querySelector('svg');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+            } else {
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+            }
+        });
+        
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuToggle.querySelector('svg');
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+            });
+        });
+    </script>
 </body>
 </html>
